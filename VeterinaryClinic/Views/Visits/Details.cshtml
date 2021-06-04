@@ -1,0 +1,84 @@
+﻿@model VeterinaryClinic.Models.Visit
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Подробности</h1>
+
+<div>
+    <h4>Посещение</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Complaints)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Complaints)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Diagnosis)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Diagnosis)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AttendinDoctor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AttendinDoctor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dateofvisit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dateofvisit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+        <dt class="col-sm-2">
+            Кличка питомца
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Animal.NickName)
+        </dd>
+        <dt class="col-sm-2">
+            Порода
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Animal.Breed)
+        </dd>
+        <dt class="col-sm-2">
+            Хозяин животного
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Owner.Fio)
+        </dd>
+        <dt class="col-sm-2">
+            Адрес хозяина
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Owner.Address)
+        </dd>
+        <dt class="col-sm-2">
+            Телефон для связи
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Owner.PhoneNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VisitID">Редактировать</a> |
+    <a asp-action="Index">Обратно к списку</a>
+</div>
